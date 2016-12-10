@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>提问</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+		<div class="page-header">
+			<h1>我要提问</h1>
+		</div>
+		<div class="panel panel-primary">
+			<div class="panel-body">
+                    <div class="form-group">
+                        <textarea id="txtAsk" class="form-control" rows="3" required="required" placeholder="请输入提问内容"></textarea>
+                    </div>               
+                    <button id="btnAsk" type="button" class="btn btn-large btn-block btn-danger">提问</button>	
+                    <a class="btn btn-default btn-block" href="/qa/list" role="button">返回列表</a>       
+			</div>
+		</div>
+	</div>
+
+	<script src="http://cdn.bootcss.com/jquery/2.1.2/jquery.min.js"></script>
+	<script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/assets/lib/layer_mobile/layer.js"></script>
+    <script src="/assets/js/ask.js"></script>
+</body>
+
+</html>

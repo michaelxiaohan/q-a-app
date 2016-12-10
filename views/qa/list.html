@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>问答系统</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+
+	<div class="container">
+		<a class="btn btn-danger pull-right" href="/qa/ask" role="button">提问</a>
+		<div class="page-header">
+			<h1>问答系统<small>基于jQuery实现的问答系统</small></h1>
+		</div>
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h3 class="panel-title">问题列表</h3>
+			</div>
+			<div class="panel-body">
+				<div class="list-group" id="aksList">
+                    {{each data}}
+                        <a href="/qa/detail/{{$value.id}}" class="list-group-item">
+                            <h4 class="list-group-item-heading">{{$value.content}}</h4>
+                            
+                            <p class="list-group-item-text">回答: 
+                                <span class="label label-info">{{$value.answers?$value.answers.length:0}}</span>次</p>
+
+                        </a>
+                    {{/each}}
+				</div>
+				<a class="btn btn-danger pull-right" href="/qa/ask" role="button">提问</a>
+			</div>
+		</div>
+	</div>
+
+	<script src="http://cdn.bootcss.com/jquery/2.1.2/jquery.min.js"></script>
+	<script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>
